@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Your Job</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <style>
+    .card-selected {
+      border: 2px solid #0d6efd;
+      background-color: #e7f1ff;
+    }
+
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked+.slider {
+      background-color: #0d6efd;
+    }
+
+    input:checked+.slider:before {
+      transform: translateX(26px);
+    }
+  </style>
+
+
+
+
+</head>
+
+<body>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="container mt-5">
+        <h2 class="mb-4 ">Post Your Job</h2>
+        <form>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="jobTitle" class="form-label">Job Title *</label>
+              <input type="text" class="form-control" id="jobTitle"
+                placeholder="Trainee, Driver, Customer planning & logistics">
+            </div>
+            <div class="col-md-6">
+              <label for="jobType" class="form-label">Job Type *</label>
+              <select class="form-select" id="jobType">
+                <option selected>Select Job Type</option>
+                <option value="Full-Time">Full-Time</option>
+                <option value="Part-Time">Part-Time</option>
+                <option value="Contract">Contract</option>
+              </select>
+            </div>
+          </div>
+    
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="jobRole" class="form-label">Job Role *</label>
+              <select class="form-select" id="jobRole">
+                <option selected>Select Job Role</option>
+                <option value="Manager">Manager</option>
+                <option value="Developer">Developer</option>
+                <option value="Designer">Designer</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="jobLocation" class="form-label">Job Location *</label>
+              <select class="form-select" id="jobLocation">
+                <option selected>Select Location</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Bangalore">Bangalore</option>
+              </select>
+            </div>
+          </div>
+    
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="qualification" class="form-label">Qualification *</label>
+              <select class="form-select" id="qualification">
+                <option selected>Select Qualification</option>
+                <option value="High School">High School</option>
+                <option value="Bachelor's">Bachelor's</option>
+                <option value="Master's">Master's</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="salary" class="form-label">Salary (Monthly) *</label>
+              <div class="row">
+                <div class="col">
+                  <input type="number" class="form-control" id="minSalary" placeholder="Min">
+                </div>
+                <div class="col">
+                  <input type="number" class="form-control" id="maxSalary" placeholder="Max">
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="experience" class="form-label">Experience *</label>
+              <div class="row">
+                <div class="col">
+                  <input type="number" class="form-control" id="minExperience" placeholder="Min">
+                </div>
+                <div class="col">
+                  <input type="number" class="form-control" id="maxExperience" placeholder="Max">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="vacancies" class="form-label">Number of Vacancies *</label>
+              <input type="number" class="form-control" id="vacancies" placeholder="Enter the number of vacancies">
+            </div>
+          </div>
+    
+          <div class="mb-3">
+            <label class="form-label">Job Posted By *</label>
+            <div class="d-flex">
+              <div class="form-check me-3">
+                <input class="form-check-input" type="radio" name="jobPostedBy" id="company" value="Company">
+                <label class="form-check-label" for="company">Company</label>
+              </div>
+              <div class="form-check me-3">
+                <input class="form-check-input" type="radio" name="jobPostedBy" id="consultant" value="Consultant">
+                <label class="form-check-label" for="consultant">Consultant</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="jobPostedBy" id="individual" value="Individual">
+                <label class="form-check-label" for="individual">Individual</label>
+              </div>
+            </div>
+          </div>
+    
+      
+
+          <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+        </form>
+      </div>
+
+
+
+    </div>
+    <div class="col-md-4">
+          
+      <div class="container mt-5">
+        <div class="text-center">
+          <button type="submit" class="btn btn-warning">Post Job</button>
+        </div>
+        <div>
+          <p class="m-5 bg-info p-4 ">Teamlease job posting
+            Post your requirement of Entry level & Blue collar roles
+            Post up to 2 jobs for free
+            Get fast responses on your requirement
+            View job responses and connect with interested candidates
+            Send Mail/SMS to the applicants
+            Add question</p>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+</div>
+ <div class="container">
+
+
+   
+ <div class="row">
+<div class="col-md-8">
+
+
+  <div class="container  mt-5">
+
+    <div class="mb-3 col-md-6">
+      <label for="companyName" class="form-label">Company Name *</label>
+      <input type="text" class="form-control" id="companyName" placeholder="Enter your company name">
+    </div>
+
+    <h2 class="mb-4">Post Your Job</h2>
+    <form>
+      <div class="mb-3 col-md-6">
+        <label for="jobDescription" class="form-label">Job Description *</label>
+        <textarea class="form-control" id="jobDescription" rows="4"></textarea>
+      </div>
+
+      <div class="mb-3 col-md-6">
+        <label for="questionnaire" class="form-label">Add Questionnaires to Job</label>
+        <button type="button" class="btn btn-warning btn-sm ms-2">Add</button>
+      </div>
+
+      <div class="mb-3 col-md-6">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="workFromHome">
+          <label class="form-check-label" for="workFromHome">This Job has work from home option</label>
+        </div>
+      </div>
+
+      <div class="row mb-3 col-md-6">
+        <div class="col-md-6">
+          <label for="email" class="form-label">Email *</label>
+          <input type="email" class="form-control" id="email" placeholder="Official Email ID Preferred">
+        </div>
+        <div class="col-md-6 ">
+          <label for="password" class="form-label">Password *</label>
+          <div class="input-group">
+            <input type="password" class="form-control" id="password" placeholder="Enter Password">
+            <button class="btn btn-outline-secondary" type="button">Show</button>
+          </div>
+        </div>
+      </div>
+
+      <h5 class="mb-3">Choose Your Job</h5>
+
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="card-title">Free Jobs</h6>
+              <p class="card-text">&#8377; 0</p>
+              <ul class="list-unstyled">
+                <li>&#x2713; Lower Priority than Premium Jobs</li>
+                <li>&#x2713; Less visibility on site</li>
+                <li>&#x2713; Limited applications: 2 responses</li>
+              </ul>
+              <button class="btn btn-light w-100" disabled>Select</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card card-selected">
+            <div class="card-body">
+              <h6 class="card-title">Premium Jobs</h6>
+              <p class="card-text">&#8377; 299 <small>(18% GST extra)</small></p>
+              <ul class="list-unstyled">
+                <li>&#x2713; More visibility across the sites and in alerts</li>
+                <li>&#x2713; Can access all the responses</li>
+                <li>&#x2713; 10X responses than free job</li>
+              </ul>
+              <button class="btn btn-primary w-100">Selected</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-warning">Post Job</button>
+      </div>
+
+      <p class="text-center mt-3">By registering with us you agree to our <a href="#">Terms and Conditions</a></p>
+    </form>
+  </div>
+
+
+</div>
+<div class="col-md-4"></div>
+
+
+
+
+
+ </div>
+
+
+ </div>
+
+
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

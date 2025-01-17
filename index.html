@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./images/image.jpeg" alt="Logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
+          <li class="nav-item associate-zone">
+            <a class="nav-link" href="#">Business/Bulk Enquiries</a>
+          </li>
+          <li class="nav-item associate-zone">
+            <a class="nav-link" href="#">TL Client / Associate Zone</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><img src="./images/men.svg" width="20px" alt=""> Employer Zone</a>
+          </li> <span>|</span>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Post Free Job</a>
+          </li>
+        </ul>
+        <div class="navLogin-btns">
+          <a href="#" class="btn"><i class="bi bi-person-circle"></i> Login</a>
+          <a href="#" class="resister-btn">Register</a>
+          <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              EN
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item" href="#">EN</a></li>
+              <li><a class="dropdown-item" href="#">HI</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="main">
+    <div class="center">
+      <div class="header">
+        <h1>Find the best job near you</h1>
+        <h3>38021+ active job vacancies to grab</h3>
+        <form>
+          <select class="form-control" id="role1" name="role">
+            <option placeholder="Select job Role "> Select Job Role</option>
+          </select>
+          <select class="form-control" id="role2" name="role">
+            <option value="select city">Select City</option>
+            <option placeholder="Select job Role">Hyderabad</option>
+            <option value="b">Andaman & Nicobar Islands</option>
+            <option value="c">Mayabunder</option>
+            <option value="d">Nicobar</option>
+            <option value="d">Port Blair</option>
+            <option value="a">East Godavari</option>
+            <option value="a">Guntakal</option>
+            <option value="a">Guntur</option>
+            <option value="a">Guntur</option>
+          </select>
+          <button class="searchBtn">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 res-image-col">
+        <div>
+          <img class="res-image" src="./images/template1.jpg" style="width: 100%" />
+        </div>
+        <div class="container mt-2">
+          <ul class="nav nav-tabs" id="jobTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="top-job-roles-tab" data-bs-toggle="tab"
+                data-bs-target="#top-job-roles" type="button" role="tab" aria-controls="top-job-roles"
+                aria-selected="true">
+                Top Job Roles
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="job-details-videos-tab" data-bs-toggle="tab"
+                data-bs-target="#job-details-videos" type="button" role="tab" aria-controls="job-details-videos"
+                aria-selected="false">
+                Job Details Videos
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content mt-3" id="jobTabsContent">
+            <div class="tab-pane fade show active" id="top-job-roles" role="tabpanel"
+              aria-labelledby="top-job-roles-tab">
+              <div class="jobs-card">
+                <div class="row g-3">
+                  <div class="col-md-3 col-4">
+                    <div class="job-card">
+                      <img src="./images/p1.svg" alt="Work from Home" />
+                      <h3>Work from Home</h3>
+                      <p>62 Active Jobs</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-4">
+                    <div class="job-card">
+                      <img src="./images/p2.svg" alt="Accountant" />
+                      <h3>Accountant</h3>
+                      <p>285 Active Jobs</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-4">
+                    <div class="job-card">
+                      <img src="./images/p3.svg" alt="BPO/Customer Care" />
+                      <h3>BPO / Customer Care</h3>
+                      <p>2371 Active Jobs</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-4">
+                    <div class="job-card">
+                      <img src="./images/p3.svg" alt="Data Entry/Back Office" />
+                      <h3>Data Entry / Back Office</h3>
+                      <p>2322 Active Jobs</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-4">
+                    <div class="job-card">
+                      <img src="./images/p4.svg" alt="Sales/Marketing" />
+                      <h3>Sales / Marketing</h3>
+                      <p>559 Active Jobs</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-4">
+                    <div class="job-card">
+                      <img src="./images/p5.svg" alt="Receptionist" />
+                      <h3>Receptionist / Front Office</h3>
+                      <p>36 Active Jobs</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-4">
+                    <div class="job-card">
+                      <img src="./images/p6.svg" alt="Hospitality" />
+                      <h3>Hospitality Executives</h3>
+                      <p>18 Active Jobs</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-4">
+                    <div class="job-card">
+                      <img src="./images/p7.svg" alt="Delivery" />
+                      <h3>Delivery</h3>
+                      <p>12 Active Jobs</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-4">
+                    <div class="job-card">
+                      <img src="./images/p8.svg" alt="Cook/Chef" />
+                      <h3>Cook / Chef</h3>
+                      <p>8 Active Jobs</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-4">
+                    <div class="job-card">
+                      <img src="./images/p9.svg" alt="Driver" />
+                      <h3>Driver</h3>
+                      <p>0 Active Jobs</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-4">
+                    <div class="job-card">
+                      <img src="./images/p10.svg" alt="Beautician" />
+                      <h3>Beauticians / Spa</h3>
+                      <p>5 Active Jobs</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-4">
+                    <div class="job-card">
+                      <span class="new">New</span>
+                      <img src="./images/p11.svg" alt="Mechanic" />
+                      <h3>Mechanic</h3>
+                      <p>34 Active Jobs</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-4">
+                    <div class="job-card">
+                      <span class="new">New</span>
+                      <img src="./images/p12.svg" alt="IT Software Engineer" />
+                      <h3>IT Software-Engineer</h3>
+                      <p>129 Active Jobs</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-4">
+                    <div class="job-card">
+                      <span class="new">New</span>
+                      <img src="./images/p13.svg" alt="Retail" />
+                      <h3>Retail / Store Executive</h3>
+                      <p>29 Active Jobs</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="job-details-videos" role="tabpanel" aria-labelledby="job-details-videos-tab">
+              <!-- Blank section for Job Details Videos -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-3">
+        <a href="#"><img class="w-100 mb-2" src="./images/p15.jpg" alt="" /></a>
+        <a href="#"><img class="w-100" src="./images/p16.jpg" alt="" /></a>
+      </div>
+    </div>
+  </div>
+  <div></div>
+  <div class="container p-4">
+    <h3 class="text-muted">Top Companies</h3>
+    <div id="topCompaniesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="500"
+      data-bs-pause="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="d-flex">
+            <img src="./images/i1.png" alt="Company 1" class="d-block w-100" />
+            <img src="./images/i2.png" alt="Company 2" class="d-block w-100" />
+            <img src="./images/i3.png" alt="Company 3" class="d-block w-100" />
+            <img src="./images/i4.png" alt="Company 4" class="d-block w-100" />
+            <img src="./images/i5.png" alt="Company 5" class="d-block w-100" />
+          </div>
+        </div>
+        <!-- Add more carousel items as needed -->
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#topCompaniesCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#topCompaniesCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+
+  <div class="areyouanemploye container-fluid">
+    <div class="row align-items-center">
+
+      <!-- Employer Section -->
+      <div class="col-md-6 text-center item1">
+        <h4>Are you an employer?</h4>
+        <p class="mb-4">Hire in 30 Mins</p>
+        <button class="postjobBtn"><a class="" href="">Post Free Job</a></button>
+
+        <div class="employer-card">
+          <div class="mini-card1">
+            <img src="./images/computer1.png" alt="">
+            <h2>1,25,000+</h2>
+            <p>Registration Per Month</p>
+          </div>
+          <div class="mini-card2">
+            <img src="./images/computer2.png" alt="">
+            <h2>41,00,000 </h2>
+            <p>Active Job Seekers</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- YouTube Video Section -->
+      <div class="col-md-6  youtube-field ">
+        <h3>Why Teamlease.com?</h3>
+        <iframe width="100%" height="300" src="https://www.youtube.com/embed/-vI-7yvZ6zI" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row mt-4">
+      <!-- Recent Jobs Section -->
+      <div class="col-md-6 col-12 job-listing">
+        <div class="d-flex justify-content-between mb-2">
+          <h4>Recent Jobs</h4>
+          <a class="text-decoration-none" style="color: orange;" href="#">View All jobs</a>
+        </div>
+
+        <ul class="list">
+          <li>
+            <a href="#">Internal Control Manager for a Client of TeamLease Services
+              Ltd, Bangalore</a>
+          </li>
+          <li>
+            <a href="#">Telesales Executive, Adithya IT Solution Pvt Ltd, Salem</a>
+          </li>
+          <li><a href="#">Account, Adithya IT Solution Pvt Ltd, Salem</a></li>
+          <li><a href="#">Software Developer, AMC Career, Pune</a></li>
+          <li><a href="#">Software Engineer, AMC Career, Pune</a></li>
+          <li>
+            <a href="#">Internal Control Manager for a Client of TeamLease Services
+              Ltd, Bangalore</a>
+          </li>
+          <li>
+            <a href="#">Telesales Executive, Adithya IT Solution Pvt Ltd, Salem</a>
+          </li>
+          <li><a href="#">Account, Adithya IT Solution Pvt Ltd, Salem</a></li>
+          <li><a href="#">Software Developer, AMC Career, Pune</a></li>
+          <li><a href="#">Software Engineer, AMC Career, Pune</a></li>
+          <li>
+            <a href="#">Telesales Executive, Adithya IT Solution Pvt Ltd, Salem</a>
+          </li>
+          <li><a href="#">Account, Adithya IT Solution Pvt Ltd, Salem</a></li>
+          <li><a href="#">Software Developer, AMC Career, Pune</a></li>
+          <li><a href="#">Software Engineer, AMC Career, Pune</a></li>
+        </ul>
+      </div>
+
+      <!-- Number of Jobs in Top Cities Section -->
+      <div class="col-md-6 col-12 city-listing p-3">
+        <div class="d-flex justify-content-between mb-2">
+          <h4>Number of Jobs in Top Cities</h4>
+          <a class="text-decoration-none" style="color: orange;" href="#">View All jobs</a>
+        </div>
+        <ul class="list">
+          <li class="d-flex justify-content-between">
+            <a href="#">Hyderabad</a>
+            <p>183</p>
+          </li>
+          <li class="d-flex justify-content-between">
+            <a href="#">Delhi</a>
+            <p>150</p>
+          </li>
+          <li class="d-flex justify-content-between">
+            <a href="#">Bangalore</a>
+            <p>200</p>
+          </li>
+          <li class="d-flex justify-content-between">
+            <a href="#">Mumbai</a>
+            <p>175</p>
+          </li>
+          <li class="d-flex justify-content-between">
+            <a href="#">Chennai</a>
+            <p>125</p>
+          </li>
+          <li class="d-flex justify-content-between">
+            <a href="#">Kolkata</a>
+            <p>90</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="testimonial-section">
+    <h2 class="section-title text-white">Testimonials</h2>
+    <div class="carousel-container">
+      <div class="testimonial-carousel">
+        <div class="testimonial">
+          <img src="./images/p14.webp" alt="User photo" class="profile-pic">
+          <div class="testimonial-content">
+            <p class="name">-Pooja</p>
+            <p class="designation">TeamLease Associate</p>
+            <p class="message">
+              My greatest concern of earning revenue got solved when I entered the organization.
+              It brings me pride and satisfaction to be associated with such a great company.
+              I would like to thank TeamLease for being so approachable and punctual while helping
+              me change my life with my addition to the organization. <span class="hashtag">#MyTLFamily</span>
+            </p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <img src="./images/suman.webp" alt="User photo" class="profile-pic">
+          <div class="testimonial-content">
+            <p class="name">-Suman</p>
+            <p class="designation">HR Manager</p>
+            <p class="message">
+              TeamLease has been a wonderful part of my journey, providing me with numerous opportunities
+              for growth and development. Their support has been invaluable. <span class="hashtag">#ThankYouTL</span>
+            </p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <img src="./images/p14.webp" alt="User photo" class="profile-pic">
+          <div class="testimonial-content">
+            <p class="name">Rakhi</p>
+            <p class="designation">Assistant</p>
+            <p class="message">
+              TeamLease has been a wonderful part of my journey, providing me with numerous opportunities
+              for growth and development. Their support has been invaluable. <span class="hashtag">#ThankYouTL</span>
+            </p>
+          </div>
+        </div>
+        <div class="testimonial">
+          <img src="./images/kuldeep.png" alt="User photo" class="profile-pic">
+          <div class="testimonial-content">
+            <p class="name">-Jatin</p>
+            <p class="designation">HR Manager</p>
+            <p class="message">
+              TeamLease has been a wonderful part of my journey, providing me with numerous opportunities
+              for growth and development. Their support has been invaluable. <span class="hashtag">#ThankYouTL</span>
+            </p>
+          </div>
+        </div>
+        <!-- Add more testimonials here -->
+      </div>
+      <div class="navigation-dots">
+        <span class="dot" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+        <span class="dot" data-index="3"></span>
+        <!-- Add more dots as per the number of testimonials -->
+      </div>
+    </div>
+  </div>
+
+  <section class="aboutsectionHome">
+    <div class="info-section">
+      <div class="info-container">
+        <div class="info-text">
+          <h3>What are Entry-level & Blue-collar jobs?</h3>
+          <p>
+            When you hear this term, what is the first question that pops up
+            in your mind? Why are these terms trending and popular nowadays?
+            Entry-level and blue-collar jobs are basically known as the manual
+            workforce. The manual workforce is a primary key factor in
+            industrial sectors such as logistics, food industry, construction,
+            manufacturing, warehousing, agriculture, transportation, beauty,
+            telecom, and retail sector, for both entry-level and experienced
+            employees.
+          </p>
+          <p>
+            There are a huge number of entry-level and blue-collar job
+            vacancies for 9th pass, 10th pass, 12th pass, diploma, and degree
+            candidates across India. But the percentage of workers or
+            employees placed to companies who are hiring for entry-level and
+            blue-collar workers such as plumbers, fitters, mechanics,
+            electricians, beauticians, drivers, deliveries, staff nurses, Data
+            entry, cooks/chefs, security, and maids/nannies are very low.
+            Teamlease.com tries to reduce this gap by matching the right
+            employees to the right job, where workers can check, search, and
+            apply for jobs in their own preferred local languages. This will
+            decrease the recruitment and operational costs of companies
+            towards entry-level and blue-collar jobs, at the same time
+            increase employment in entry-level and blue-collar and vocational
+            sectors, respectively.
+          </p>
+        </div>
+        <div class="info-text">
+          <h3>Why Teamlease.com for Entry-level & Blue-collar jobs?</h3>
+          <p>
+            Getting placed in an entry-level or blue-collar job market in
+            India is very difficult. If you are looking for entry-level jobs
+            or vocational sector jobs, then you’re in the right place.
+            Teamlease.com is a job portal that helps in finding jobs for
+            workers or employees with ease. TeamLease is considered as one of
+            the best job college degree to showcase. In order to remove this
+            gap, we introduced TeamLease.com, as a recruitment platform
+            specifically designed for skilled laborers, entry-level employees,
+            and experienced entry-level and blue-collar workers, where they
+            can search for jobs and can apply easily for best-in-class
+            entry-level & blue-collar jobs hiring companies across India such
+            as OLA, Swiggy, Zomato, Uber, Box8, Pizza hut, Dominos, KFC,
+            Fasoos, Foodpanda, Takeaway, Justeat, etc.
+          </p>
+        </div>
+      </div>
+      <div class="jobs-section">
+        <div class="jobs-category">
+          <h4>Jobs By Roles</h4>
+          <p>
+            Accountant | Architect | BPO/Telecaller | Tech Support | Content
+            Writer | Fashion Designer | Data Entry | SEO/Social Media |
+            HR/Admin | Engineer (Core, Non-IT) | Sales Executive | Management
+            Trainee | Design/Animation | Teacher/Trainer | Delivery Executive
+            | Chef/Cook | Counsellor | More Roles
+          </p>
+        </div>
+        <div class="jobs-category">
+          <h4>Jobs By Cities</h4>
+          <p>
+            Ahmedabad | Bangalore | Chennai | Delhi | Hyderabad | Kolkata |
+            Mumbai | Pune | Noida | Gurgaon | Chandigarh | Panaji | Patna |
+            Bhopal | Ahmednagar | Bhubaneshwar | Pondicherry | Mohali | Jaipur
+            | More Cities
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="footer-section">
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="foterbtn mb-4">
+              <button class="btn btn-outline-secondary">TL Client / Associate zone</button>
+              <button class="btn btn-outline-secondary">Business/Bulk Enquiries</button>
+            </div>
+            <div class="informa">
+              <h4>Information</h4>
+              <a class="text-white text-decoration-none" href="#">Contact Us</a>
+              <a class="text-white text-decoration-none" href="#">Business Enquiries</a>
+              <a class="text-white text-decoration-none" href="#">FAQ</a>
+              <a class="text-white text-decoration-none" href="#">Blog</a>
+              <a class="text-white text-decoration-none" href="#">Referral</a>
+            </div>
+          </div>
+          <div class="col-md-4 m-0">
+            <div class="footer-column">
+              <h4>Follow Us</h4>
+              <div class="social-icons">
+                <a href="#"><img src="./images/linkedIn.svg" alt="LinkedIn" /></a>
+                <a href="#"><img src="./images/facebook.svg" alt="Facebook" /></a>
+                <a href="#"><img src="./images/youtube.svg" alt="YouTube" /></a>
+              </div>
+              <div class="google_play">
+                <h5>Easy Job access on the go</h4>
+                  <a href="#"><img src="./images/google_play_store.svg" alt="Google Play" /></a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="copyright">
+      <div class="container">
+        Copyright &copy; 2025 TeamLease. All rights reserved<br />
+        <span class="copyright-fo">
+          ISO 27001 Information Technology Security Management System. Certified
+          by British Standards<br />
+        </span>
+        <span class="copy-icons">
+          <a class="text-white text-decoration-none" href="#">Terms & Conditions</a> | <a
+            class="text-white text-decoration-none" href="#">Privacy Policy</a> |
+          <a class="text-white text-decoration-none" href="#">Sitemap</a>
+        </span>
+      </div>
+    </div>
+  </section>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+  integrity="sha384-oBqDVmMz4fnFO9gybYl0u4l4HtZzpY1V7O+Xp6D3J6A0ZpS6trK7MDAz2evIv7YxC" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+  integrity="sha384-cuF02XzF8mHzP0MmdCczK35YqfVckHgWyK8u9jUpYkNdQkt7Blb6wGzDd9fD7c4g" crossorigin="anonymous"></script>
+<script>
+
+  const carousel = document.querySelector('.testimonial-carousel');
+  const dots = document.querySelectorAll('.dot');
+
+  let currentIndex = 0;
+
+  // Function to update the carousel position
+  function updateCarousel(index) {
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+  }
+
+  // Add click events to dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      currentIndex = index;
+      updateCarousel(currentIndex);
+    });
+  });
+
+  // Auto-slide functionality
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % dots.length;
+    updateCarousel(currentIndex);
+  }, 5000); // Adjust time interval as needed
+</script>
+
+
+
+</html>
