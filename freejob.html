@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Your Job</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .bodyBg {
+      background-color: #f8f9fa;
+      padding: 1rem 0;
+    }
+
+    .card-selected {
+      border: 2px solid #0d6efd;
+      background-color: #e7f1ff;
+    }
+
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: 0.4s;
+      border-radius: 34px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: 0.4s;
+      border-radius: 50%;
+    }
+
+    input:checked+.slider {
+      background-color: #0d6efd;
+    }
+
+    input:checked+.slider:before {
+      transform: translateX(26px);
+    }
+
+    .navbar {
+      box-shadow: 0px 4px 4px 0px lightgray;
+    }
+
+    .navbar-nav .nav-item {
+      margin-left: 15px;
+    }
+
+    .form-control {
+      margin-bottom: 15px;
+    }
+
+    .btn-warning {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .btn-primary {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .card-body ul li {
+      margin-bottom: 5px;
+    }
+
+    .form-check-label {
+      margin-left: 10px;
+    }
+
+    .card {
+      margin-bottom: 15px;
+    }
+
+    .lightbg {
+      background-color: white;
+
+
+    }
+
+    .copyright {
+      text-align: center;
+      color: #aaa;
+      border-top: 1px solid #071d37;
+      background: #133048;
+      padding: 20px;
+    }
+
+    .foterbtn {
+      display: flex;
+      gap: 10px;
+      color: white;
+    }
+
+    .foterbtn button {
+      font-size: 14px;
+    }
+
+
+
+    .copyright {
+      font-size: 12px;
+      color: white;
+    }
+
+    .informa,
+    .footer-column h4,
+    .copyright-fo,
+    .copy-icons {
+      /* display: none; */
+      color: white;
+
+    }
+
+
+    .footer-column {
+      margin-bottom: 20px;
+    }
+
+    .footer-column h4 {
+      color: #fff;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .footer-column a {
+      color: #ccc;
+      text-decoration: none;
+      margin-right: 10px;
+      display: inline-block;
+      margin-bottom: 5px;
+    }
+
+    .footer-column a:hover {
+      color: #fff;
+    }
+
+    .google_play {
+      margin-top: 2rem;
+
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      color: white;
+      background: #133048;
+    }
+
+    .footer-images{
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+    .footer-images img{
+      width:120px;
+      height:auto;
+      object-fit: contain;
+    }
+    .navbar-expand-lg .navbar-collapse{
+      display: flex;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./images/image.jpeg" alt="Logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Search Candidate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+        <div class="d-flex gap-3 align-items-center">
+          <a href="#" class="btn">Login</a>
+          <button type="button" class="btn border-warning text-warning text-align-end">Register</button>
+          <div class="dropdown">
+            <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+              <li><a class="dropdown-item" href="#">EN</a></li>
+              <li><a class="dropdown-item" href="#">HI</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="bodyBg">
+    <div class="container mt-5">
+      <div class="row">
+
+        <div class="col-md-8 ">
+          <div class="p-4 rounded lightbg">
+            <h2 class="mb-4">Post Your Job</h2>
+            <form>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="jobTitle" class="form-label">Job Title *</label>
+                  <input type="text" class="form-control" id="jobTitle"
+                    placeholder="Trainee, Driver, Customer planning & logistics">
+                </div>
+                <div class="col-md-6">
+                  <label for="jobType" class="form-label">Job Type *</label>
+                  <select class="form-select" id="jobType">
+                    <option selected>Select Job Type</option>
+                    <option value="Full-Time">Full-Time</option>
+                    <option value="Part-Time">Part-Time</option>
+                    <option value="Contract">Contract</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="jobRole" class="form-label">Job Role *</label>
+                  <select class="form-select" id="jobRole">
+                    <option selected>Select Job Role</option>
+                    <option value="Manager">Manager</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Designer">Designer</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="jobLocation" class="form-label">Job Location *</label>
+                  <select class="form-select" id="jobLocation">
+                    <option selected>Select Location</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Bangalore">Bangalore</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="qualification" class="form-label">Qualification *</label>
+                  <select class="form-select" id="qualification">
+                    <option selected>Select Qualification</option>
+                    <option value="High School">High School</option>
+                    <option value="Bachelor's">Bachelor's</option>
+                    <option value="Master's">Master's</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="salary" class="form-label">Salary (Monthly) *</label>
+                  <div class="row">
+                    <div class="col">
+                      <input type="number" class="form-control" id="minSalary" placeholder="Min">
+                    </div>
+                    <div class="col">
+                      <input type="number" class="form-control" id="maxSalary" placeholder="Max">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="experience" class="form-label">Experience *</label>
+                  <div class="row">
+                    <div class="col">
+                      <input type="number" class="form-control" id="minExperience" placeholder="Min">
+                    </div>
+                    <div class="col">
+                      <input type="number" class="form-control" id="maxExperience" placeholder="Max">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="vacancies" class="form-label">Number of Vacancies *</label>
+                  <input type="number" class="form-control" id="vacancies" placeholder="Enter the number of vacancies">
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Job Posted By *</label>
+                <div class="d-flex">
+                  <div class="form-check me-3">
+                    <input class="form-check-input" type="radio" name="jobPostedBy" id="company" value="Company">
+                    <label class="form-check-label" for="company">Company</label>
+                  </div>
+                  <div class="form-check me-3">
+                    <input class="form-check-input" type="radio" name="jobPostedBy" id="consultant" value="Consultant">
+                    <label class="form-check-label" for="consultant">Consultant</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="jobPostedBy" id="individual" value="Individual">
+                    <label class="form-check-label" for="individual">Individual</label>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="text-center ">
+            <button type="submit" class="btn btn-warning mb-2 w-100">Post Job</button>
+          </div>
+          <div class="py-2 rounded lightbg">
+            <h5 class="ps-3">Teamlease job posting</h5>
+            <ul style="font-weight: 550; font-size: 17px; line-height: 30px;">
+              <li>
+                Post your requirement of Entry level & Blue collar roles
+              </li>
+              <li>
+                Post up to 2 jobs for free
+
+              </li>
+              <li>
+                Get fast responses on your requirement
+
+              </li>
+              <li>
+                View job responses and connect with interested candidates
+
+              </li>
+              <li>
+                Send Mail/SMS to the applicants
+
+              </li>
+              <li>
+                Add questionaries to your job and get the matching profiles
+
+              </li>
+            </ul>
+          </div>
+          <div class="py-2 rounded lightbg  mt-3">
+            <div>
+              <ul>
+                <li style="font-weight: 500;">Email :  <a href="atssupport@teamlease.com" style="color:#7828fd">atssupport@teamlease.com</a>
+                </li>
+                <li style="font-weight: 500;">Working hours : <a href="#" style="color:#7828fd">Mon to Sat (9:30 AM to 7:30 PM)</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-md-8">
+          <div class="p-4 rounded lightbg">
+            <h2 class="mb-4">Post Your Job</h2>
+            <form>
+              <div class="mb-3">
+                <label for="companyName" class="form-label">Company Name *</label>
+                <input type="text" class="form-control" id="companyName" placeholder="Enter your company name">
+              </div>
+
+              <div class="mb-3">
+                <label for="jobDescription" class="form-label">Job Description *</label>
+                <textarea class="form-control" id="jobDescription" rows="4"></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label for="questionnaire" class="form-label">Add Questionnaires to Job</label>
+                <button type="button" class="btn btn-warning btn-sm ms-2">Add</button>
+              </div>
+
+              <div class="mb-3 form-check">
+                <input class="form-check-input" type="checkbox" id="workFromHome">
+                <label class="form-check-label" for="workFromHome">This Job has work from home option</label>
+              </div>
+
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email *</label>
+                  <input type="email" class="form-control" id="email" placeholder="Official Email ID Preferred">
+                </div>
+                <div class="col-md-6">
+                  <label for="password" class="form-label">Password *</label>
+                  <div class="input-group">
+                    <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                    <button class="btn btn-outline-warning" style="height:38px;"  type="button">Show</button>
+                  </div>
+                </div>
+              </div>
+
+              <h5 class="mb-3">Choose Your Job</h5>
+
+              <div class="row mb-4">
+                <div class="col-md-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-title">Free Jobs</h6>
+                      <p class="card-text">&#8377; 0</p>
+                      <ul class="list-unstyled">
+                        <li>&#x2713; Lower Priority than Premium Jobs</li>
+                        <li>&#x2713; Less visibility on site</li>
+                        <li>&#x2713; Limited applications: 2 responses</li>
+                      </ul>
+                      <button class="btn btn-primary w-100">Select</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="card card-selected">
+                    <div class="card-body">
+                      <h6 class="card-title">Premium Jobs</h6>
+                      <p class="card-text">&#8377; 299 <small>(18% GST extra)</small></p>
+                      <ul class="list-unstyled">
+                        <li>&#x2713; More visibility across the sites and in alerts</li>
+                        <li>&#x2713; Can access all the responses</li>
+                        <li>&#x2713; 10X responses than free job</li>
+                      </ul>
+                      <button class="btn btn-primary w-100">Selected</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn btn-warning">Post Job</button>
+              </div>
+
+              <p class="text-center mt-3">By registering with us you agree to our <a href="#">Terms and Conditions</a>
+              </p>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-md-4"></div>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <section class="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="foterbtn mb-4">
+              <button class="btn btn-outline-secondary">Associate Login </button>
+              <button class="btn btn-outline-secondary">Business/Bulk Enquiries</button>
+            </div>
+            <div class="informa" style="text-align: start;">
+              <h4>Information</h4>
+              <a class="text-white text-decoration-none p-3" href="#">Contact Us</a> |
+              <a class="text-white text-decoration-none p-3" href="#">Business Enquiries</a> |
+              <a class="text-white text-decoration-none p-3" href="#">FAQ</a>
+
+            </div>
+          </div>
+          <div class="col-md-4 m-0">
+            <div class="footer-column">
+              <h4>Follow Us</h4>
+              <div class="social-icons">
+                <a href="#"><img src="./images/linkedIn.svg" alt="LinkedIn" /></a>
+                <a href="#"><img src="./images/facebook.svg" alt="Facebook" /></a>
+                <a href="#"><img src="./images/youtube.svg" alt="YouTube" /></a>
+              </div>
+              <div class="google_play">
+                <h5>Easy Job access on the go</h4>
+                  <a href="#"><img src="./images/google_play_store.svg" alt="Google Play" /></a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+  </footer>
+  </div>
+  <div class="copyright">
+    <div class="container">
+      Copyright &copy; 2025 TeamLease. All rights reserved<br />
+      <span class="copyright-fo">
+        ISO 27001 Information Technology Security Management System. Certified
+        by British Standards<br />
+      </span>
+      <span class="copy-icons">
+        <a class="text-white text-decoration-none" href="#">Terms & Conditions</a> | <a
+          class="text-white text-decoration-none" href="#">Privacy Policy</a> |
+        <a class="text-white text-decoration-none" href="#">Sitemap</a>
+      </span>
+    </div>
+  </div>
+  </section >
+ <section class="container">
+  <div class="footer-images">
+    <img  src="./images/f1.jpg"   alt="">
+  <img src="./images/f2.jpg"   alt="">
+  <img src="./images/f3.jpg"   alt="">
+  <img src="./images/f4.jpg"   alt="">
+  <img src="./images/image.jpeg"   alt="">
+  <img src="./images/f8.png"   alt="">
+  
+  </div>
+ </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

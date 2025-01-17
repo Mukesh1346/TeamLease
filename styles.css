@@ -838,6 +838,29 @@ footer {
     display: none;
   }
 
+  
+.footer-column {
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.footer-column a {
+  color: #ccc;
+  text-decoration: none;
+  margin-right: 10px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.footer-column a:hover {
+  color: #fff;
+}
+
   .copyright{
     font-size: 12px;
   }
